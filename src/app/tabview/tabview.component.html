@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs">
+    <li *ngFor="let panel of tabview"
+        (click)="selectedPanel(panel)"
+        [class.active]="panel.active"
+    >
+        <a href="#">
+            {{ panel.title }}
+        </a>
+    </li>
+</ul>
+<ng-content></ng-content>
